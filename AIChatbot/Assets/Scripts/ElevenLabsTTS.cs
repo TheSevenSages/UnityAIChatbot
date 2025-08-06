@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 
 public class ElevenLabsTTS : MonoBehaviour
 {
-    public string API_Key = "sk_3f2daca8220418cd6901317f0ebfc1f9194f1fd8c90d09e9";
+    public string API_Key = "";
     public string VoiceID = "";
     private string API_URL = "https://api.elevenlabs.io";
 
