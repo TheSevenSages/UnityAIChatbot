@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ad5bbe5555b074186e461e263ae391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  API_Key: sk_bfb573beefb3c029129d3b57dc02a859a4bfecc449f4fd8a
+  key_file: {fileID: 4900000, guid: dc3b9f1afed1c9f4aa2b918d0d3da20a, type: 3}
   VoiceID: Dslrhjl3ZpzrctukrQSN
   Streaming: 0
   audio_source: {fileID: 378533065}

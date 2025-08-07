@@ -7,7 +7,12 @@ using UnityEngine.Networking;
 
 public class ElevenLabsTTS : MonoBehaviour
 {
-    public string API_Key = "";
+    public TextAsset key_file;
+    private class PrivateKey
+    {
+        public string key;
+    }
+    private string API_Key;
     public string VoiceID = "";
     private string API_URL = "https://api.elevenlabs.io";
 
@@ -17,7 +22,15 @@ public class ElevenLabsTTS : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(SendRequest("HELLO WORLD!"));
+        // Get API key from file
+        API_Key = JsonUtility.FromJson<PrivateKey>(key_file.text).key;
+        //// Play Demo Message
+        //StartCoroutine(SendRequest("Hello World!"));
+    }
+
+    public void SendElevenLabsMessage(string message)
+    {
+        StartCoroutine(SendRequest(message));
     }
 
     private IEnumerator SendRequest(string message)
