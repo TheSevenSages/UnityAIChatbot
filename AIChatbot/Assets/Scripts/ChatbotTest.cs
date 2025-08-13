@@ -11,7 +11,7 @@ public class ChatbotTest : MonoBehaviour
 
     void HandleReply(string reply)
     {
-        Debug.Log(reply);
+        //Debug.Log(reply);
         UI_1.text = reply;
     }
 
