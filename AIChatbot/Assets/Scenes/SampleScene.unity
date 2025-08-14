@@ -149,10 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ac9f2a8a948eb479c7e033202f3ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelAsset: {fileID: 5022602860645237092, guid: af146b7095499b94f90d1c26abfbb8b0, type: 3}
+  modelAsset: {fileID: 5022602860645237092, guid: 6e104df99c40318469d3a71befefba11, type: 3}
   phonemeAsset: {fileID: 4900000, guid: 3818710a0fc52a34588fc5849e685e51, type: 3}
-  inputText: Once upon a time, there lived a girl called Alice. She lived in a house
-    in the woods.
 --- !u!4 &12475722
 Transform:
   m_ObjectHideFlags: 0
@@ -1606,9 +1604,9 @@ MonoBehaviour:
   TTS:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12475721}
-        m_TargetAssemblyTypeName: SentisTTS, Assembly-CSharp
-        m_MethodName: TextToSpeech
+      - m_Target: {fileID: 378533063}
+        m_TargetAssemblyTypeName: ElevenLabsTTS, Assembly-CSharp
+        m_MethodName: SendElevenLabsMessage
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
