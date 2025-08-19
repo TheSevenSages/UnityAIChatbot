@@ -49,7 +49,7 @@ public class SentisTTS : MonoBehaviour
         worker = new Worker(model, BackendType.GPUCompute);
     }
 
-    public void TextToSpeech(string message)
+    public float TextToSpeech(string message)
     {
         string ptext;
         if (hasPhenomeDictionary)
@@ -64,7 +64,7 @@ public class SentisTTS : MonoBehaviour
             //ptext = "W AH1 N S AH0 P AA1 N AH0 T AY1 M , AH0 F R AA1 G M EH1 T AH0 P R IH1 N S EH0 S . DH AH0 F R AA1 G K IH1 S T DH AH0 P R IH1 N S EH0 S AH0 N D B IH0 K EY1 M AH0 P R IH1 N S .";
             //ptext = "D UW1 P L AH0 K EY2 T";
         }
-        DoInference(ptext);
+        return DoInference(ptext);
     }
 
     void ReadDictionary()
@@ -160,7 +160,7 @@ public class SentisTTS : MonoBehaviour
         return tokens;
     }
 
-    public void DoInference(string ptext)
+    public float DoInference(string ptext)
     {
         int[] tokens = GetTokens(ptext);
 
@@ -174,8 +174,10 @@ public class SentisTTS : MonoBehaviour
 
         clip = AudioClip.Create("voice audio", samples.Length, 1, samplerate, false);
         clip.SetData(samples, 0);
-
+        
         Speak();
+
+        return clip.length;
     }
 
     void Speak()
