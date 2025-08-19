@@ -211,13 +211,14 @@ public class FaceBlend : MonoBehaviour
     }
 
     // Update is called once per frame
+    float t = 0.0f;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        t += Time.deltaTime;
+        if (t > 4.5f)
         {
-            //string message = "Hello World";
-            //float length = tts.TextToSpeech(message);
-            //StartMouthAnimation(length, message);
+            animator.SetTrigger("Blink");
+            t = 0.0f;
         }
     }
 }

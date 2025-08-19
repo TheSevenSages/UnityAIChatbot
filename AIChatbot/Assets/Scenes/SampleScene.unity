@@ -1255,6 +1255,18 @@ PrefabInstance:
       propertyPath: tts
       value: 
       objectReference: {fileID: 12475721}
+    - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[12]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[13]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[60]'
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
