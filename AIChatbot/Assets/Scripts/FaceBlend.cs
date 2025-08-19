@@ -204,10 +204,10 @@ public class FaceBlend : MonoBehaviour
         Debug.Log("DONE!");
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void SpeakingFaceString(string message)
     {
-
+        float length = tts.TextToSpeech(message);
+        StartMouthAnimation(length, message);
     }
 
     // Update is called once per frame
@@ -215,9 +215,9 @@ public class FaceBlend : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            string message = "Hello World";
-            float length = tts.TextToSpeech(message);
-            StartMouthAnimation(length, message);
+            //string message = "Hello World";
+            //float length = tts.TextToSpeech(message);
+            //StartMouthAnimation(length, message);
         }
     }
 }

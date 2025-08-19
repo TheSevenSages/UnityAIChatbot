@@ -1199,6 +1199,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734993493}
   m_CullTransparentMesh: 1
+--- !u!1001 &808611350
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.57675946
+      objectReference: {fileID: 0}
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 731330028960337739, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_Name
+      value: Albert 2 model
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218350488933366020, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: tts
+      value: 
+      objectReference: {fileID: 12475721}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
 --- !u!1 &815116043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1499,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1128214049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4218350488933366020, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+  m_PrefabInstance: {fileID: 808611350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2b8592634da0a49b9fc63df2f3a2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1275188450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,9 +1676,9 @@ MonoBehaviour:
   TTS:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 378533063}
-        m_TargetAssemblyTypeName: ElevenLabsTTS, Assembly-CSharp
-        m_MethodName: SendElevenLabsMessage
+      - m_Target: {fileID: 1128214049}
+        m_TargetAssemblyTypeName: FaceBlend, Assembly-CSharp
+        m_MethodName: SpeakingFaceString
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1767,3 +1839,4 @@ SceneRoots:
   - {fileID: 1275188453}
   - {fileID: 378533064}
   - {fileID: 12475722}
+  - {fileID: 808611350}
