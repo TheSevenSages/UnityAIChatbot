@@ -7,6 +7,7 @@ public class FaceBlend : MonoBehaviour
 {
     enum MouthShapes {SIL, AE, RR, UH, EH, SS, OO, MM, CH, NN, TH, FF};
     public SentisTTS tts;
+    public Animator animator;
     // TODO: Create a map of all phenomes to appropriate mouth shapes
     // Use SentisTTS phenome generator to get all the phenomes in the given text
     // assume each phenome takes an equal part of the audio to play and have it go along with the elevenlabs generated audio files
@@ -127,28 +128,76 @@ public class FaceBlend : MonoBehaviour
         ["HH"] = MouthShapes.SIL
     };
 
+    // Returns the string of the name of the bool variable for the given mouthshape
+    string BoolForShape(MouthShapes shape)
+    {
+        switch (shape)
+        {
+            case MouthShapes.SIL:
+                return "SIL";
+            case MouthShapes.AE:
+                return "AE";
+            case MouthShapes.RR:
+                return "RR";
+            case MouthShapes.UH:
+                return "UH";
+            case MouthShapes.EH:
+                return "EH";
+            case MouthShapes.SS:
+                return "SS";
+            case MouthShapes.OO:
+                return "OO";
+            case MouthShapes.MM:
+                return "MM";
+            case MouthShapes.CH:
+                return "CH";
+            case MouthShapes.NN:
+                return "NN";
+            case MouthShapes.TH:
+                return "TH";
+            case MouthShapes.FF:
+                return "FF";
+            default:
+                Debug.LogError("Invalid phenome given");
+                return "";
+
+        }
+    }
 
     public void StartMouthAnimation(float seconds, string text)
     {
-        tts.TextToPhonemes(text);
-        string[] phenomes = text.Split();
+        string ptext = tts.TextToPhonemes(text);
+        string[] phenomes = ptext.Split();
         StartCoroutine(_MouthMove(seconds, phenomes));
     }
 
     private IEnumerator _MouthMove(float seconds, string[] phenomes)
     {
+        var initial_shape = phonemeToMouthShape[phenomes[0]];
+        animator.SetBool(BoolForShape(initial_shape), true);
+
         float sec_per_shape = seconds / phenomes.Length;
         float time = 0.0f;
         int i = 0;
         while (i < phenomes.Length)
         {
             // Phenome to animation
-            var shape = phonemeToMouthShape[phenomes[i]];
             time += Time.deltaTime;
             if (time > sec_per_shape)
             {
+                // Disable current mouth shape
+                var shape = phonemeToMouthShape[phenomes[i]];
+                animator.SetBool(BoolForShape(shape), false);
+
                 time = 0.0f;
                 i++;
+                animator.SetTrigger("Default");
+                if (i < phenomes.Length)
+                {
+                    // Set next mouth shape
+                    shape = phonemeToMouthShape[phenomes[i]];
+                    animator.SetBool(BoolForShape(shape), true);
+                }
             }
             yield return null;
         }
@@ -158,14 +207,17 @@ public class FaceBlend : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        string message = "Hello World";
-        float length = tts.TextToSpeech(message);
-        StartMouthAnimation(length, message);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            string message = "Hello World";
+            float length = tts.TextToSpeech(message);
+            StartMouthAnimation(length, message);
+        }
     }
 }
