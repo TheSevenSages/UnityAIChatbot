@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -219,6 +220,42 @@ public class FaceBlend : MonoBehaviour
         {
             animator.SetTrigger("Blink");
             t = 0.0f;
+        }
+        float horizontal_look = Input.mousePosition.x / Screen.width;
+        float vertical_look = Input.mousePosition.y / Screen.height;
+
+        float horizontal_weight = 0.0f;
+        if (horizontal_look > 0.5f)
+        {
+            horizontal_weight = 100.0f * ((horizontal_look - 0.5f) / 0.5f);
+            horizontal_weight = Mathf.Clamp(horizontal_weight, 0.0f, 100.0f);
+            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(19, horizontal_weight);
+            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(20, 0);
+        }
+        else
+        {
+            horizontal_weight = -100.0f * (horizontal_look / 0.5f);
+            horizontal_weight += 100.0f;
+            horizontal_weight = Mathf.Clamp(horizontal_weight, 0.0f, 100.0f);
+            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(19, 0);
+            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(20, horizontal_weight);
+        }
+
+        float vertical_weight = 0.0f;
+        if (vertical_look > 0.5f)
+        {
+            vertical_weight = 100.0f * ((vertical_look - 0.5f) / 0.5f);
+            vertical_weight = Mathf.Clamp(vertical_weight, 0.0f, 100.0f);
+            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(21, vertical_weight);
+            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(18, 0);
+        }
+        else
+        {
+            vertical_weight = -100.0f * (vertical_look / 0.5f);
+            vertical_weight += 100.0f;
+            vertical_weight = Mathf.Clamp(vertical_weight, 0.0f, 100.0f);
+            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(21, 0);
+            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(18, vertical_weight);
         }
     }
 }

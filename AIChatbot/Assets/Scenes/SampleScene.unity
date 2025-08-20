@@ -877,37 +877,37 @@ MonoBehaviour:
   blendShapes:
   - phoneme: A
     index: 0
-    maxWeight: 0.655
+    maxWeight: 0.75
   - phoneme: I
     index: 22
-    maxWeight: 0.655
+    maxWeight: 1
   - phoneme: U
     index: 47
-    maxWeight: 0.655
+    maxWeight: 1
   - phoneme: E
     index: 11
-    maxWeight: 0.655
+    maxWeight: 1
   - phoneme: O
     index: 46
-    maxWeight: 0.655
+    maxWeight: 1
   - phoneme: N
     index: 56
-    maxWeight: 0.655
+    maxWeight: 1
   - phoneme: FF
     index: 53
-    maxWeight: 0.655
+    maxWeight: 1
   - phoneme: SS
     index: 61
-    maxWeight: 0.655
+    maxWeight: 1
   - phoneme: RR
     index: 58
-    maxWeight: 0.655
+    maxWeight: 1
   - phoneme: CH
     index: 6
-    maxWeight: 0.655
+    maxWeight: 1
   - phoneme: '-'
     index: 59
-    maxWeight: 0.655
+    maxWeight: 1
   maxBlendShapeValue: 100
   minVolume: -2.5
   maxVolume: -1.5
@@ -1367,7 +1367,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.57675946
+      value: -4.8626566
       objectReference: {fileID: 0}
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1375,23 +1375,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.68
+      value: -1.6706257
       objectReference: {fileID: 0}
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.26432133
       objectReference: {fileID: 0}
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.9644347
       objectReference: {fileID: 0}
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1399,7 +1399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 149.347
       objectReference: {fileID: 0}
     - target: {fileID: 102989492288329201, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1427,6 +1427,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: 'm_BlendShapeWeights.Array.data[13]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[20]'
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
@@ -1920,9 +1924,10 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: Jacob
-  AIName: Llama
+  AIName: Albert
   prompt: A chat between a curious human and an artificial intelligence assistant.
-    The assistant gives helpful, detailed, and polite answers to the human's questions.
+    The assistant gives helpful, detailed, short, and polite answers to the human's
+    questions. Format all answers without newlines.
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
