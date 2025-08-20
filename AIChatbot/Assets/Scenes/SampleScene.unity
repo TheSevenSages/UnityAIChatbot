@@ -877,25 +877,37 @@ MonoBehaviour:
   blendShapes:
   - phoneme: A
     index: 0
-    maxWeight: 1
+    maxWeight: 0.655
   - phoneme: I
     index: 22
-    maxWeight: 1
+    maxWeight: 0.655
   - phoneme: U
     index: 47
-    maxWeight: 1
+    maxWeight: 0.655
   - phoneme: E
     index: 11
-    maxWeight: 1
+    maxWeight: 0.655
   - phoneme: O
     index: 46
-    maxWeight: 1
+    maxWeight: 0.655
   - phoneme: N
     index: 56
-    maxWeight: 1
+    maxWeight: 0.655
+  - phoneme: FF
+    index: 53
+    maxWeight: 0.655
+  - phoneme: SS
+    index: 61
+    maxWeight: 0.655
+  - phoneme: RR
+    index: 58
+    maxWeight: 0.655
+  - phoneme: CH
+    index: 6
+    maxWeight: 0.655
   - phoneme: '-'
     index: 59
-    maxWeight: 1
+    maxWeight: 0.655
   maxBlendShapeValue: 100
   minVolume: -2.5
   maxVolume: -1.5
@@ -913,7 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87560e04aa74c7a41acb9c87051c3b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: d0622910165464ec98bf667e4f571218, type: 2}
+  profile: {fileID: 11400000, guid: 73418cdf576547d4b9e6e136d9208a0a, type: 2}
   onLipSyncUpdate:
     m_PersistentCalls:
       m_Calls:
@@ -1402,6 +1414,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12475721}
     - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[4]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: 'm_BlendShapeWeights.Array.data[12]'
       value: 0
       objectReference: {fileID: 0}
@@ -1410,12 +1430,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[47]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[58]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: 'm_BlendShapeWeights.Array.data[60]'
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9092990856692700133, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
