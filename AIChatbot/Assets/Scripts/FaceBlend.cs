@@ -206,7 +206,7 @@ public class FaceBlend : MonoBehaviour
 
     public void SpeakingFaceString(string message)
     {
-        float length = tts.TextToSpeech(message);
+        float length = tts.TextToSpeechWL(message);
         StartMouthAnimation(length, message);
     }
 

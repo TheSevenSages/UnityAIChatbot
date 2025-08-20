@@ -130,6 +130,8 @@ GameObject:
   - component: {fileID: 12475722}
   - component: {fileID: 12475721}
   - component: {fileID: 12475723}
+  - component: {fileID: 12475725}
+  - component: {fileID: 12475724}
   m_Layer: 0
   m_Name: SentisTTS
   m_TagString: Untagged
@@ -263,6 +265,77 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &12475724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12475720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2163de355e8fd8e4b83b631e07455323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateMethod: 0
+  skinnedMeshRenderer: {fileID: 808611351}
+  blendShapes:
+  - phoneme: A
+    index: 0
+    maxWeight: 1
+  - phoneme: I
+    index: 22
+    maxWeight: 1
+  - phoneme: U
+    index: 47
+    maxWeight: 1
+  - phoneme: E
+    index: 11
+    maxWeight: 1
+  - phoneme: O
+    index: 46
+    maxWeight: 1
+  - phoneme: N
+    index: 56
+    maxWeight: 1
+  - phoneme: '-'
+    index: 59
+    maxWeight: 1
+  maxBlendShapeValue: 100
+  minVolume: -2.5
+  maxVolume: -1.5
+  smoothness: 0.05
+  usePhonemeBlend: 0
+--- !u!114 &12475725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12475720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87560e04aa74c7a41acb9c87051c3b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: d0622910165464ec98bf667e4f571218, type: 2}
+  onLipSyncUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 12475724}
+        m_TargetAssemblyTypeName: uLipSync.uLipSyncBlendShape, uLipSync.Runtime
+        m_MethodName: OnLipSyncUpdate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  outputSoundGain: 1
+  audioSourceProxy: {fileID: 0}
 --- !u!1 &90117053
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +723,8 @@ GameObject:
   - component: {fileID: 378533064}
   - component: {fileID: 378533063}
   - component: {fileID: 378533065}
+  - component: {fileID: 378533067}
+  - component: {fileID: 378533066}
   m_Layer: 0
   m_Name: ElevenLabs
   m_TagString: Untagged
@@ -698,8 +773,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 284ee5a046e09c94abf5ed78937d6b23, type: 3}
-  m_Resource: {fileID: 8300000, guid: 284ee5a046e09c94abf5ed78937d6b23, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -785,6 +860,77 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &378533066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378533062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2163de355e8fd8e4b83b631e07455323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateMethod: 0
+  skinnedMeshRenderer: {fileID: 808611351}
+  blendShapes:
+  - phoneme: A
+    index: 0
+    maxWeight: 1
+  - phoneme: I
+    index: 22
+    maxWeight: 1
+  - phoneme: U
+    index: 47
+    maxWeight: 1
+  - phoneme: E
+    index: 11
+    maxWeight: 1
+  - phoneme: O
+    index: 46
+    maxWeight: 1
+  - phoneme: N
+    index: 56
+    maxWeight: 1
+  - phoneme: '-'
+    index: 59
+    maxWeight: 1
+  maxBlendShapeValue: 100
+  minVolume: -2.5
+  maxVolume: -1.5
+  smoothness: 0.05
+  usePhonemeBlend: 0
+--- !u!114 &378533067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378533062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87560e04aa74c7a41acb9c87051c3b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: d0622910165464ec98bf667e4f571218, type: 2}
+  onLipSyncUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 378533066}
+        m_TargetAssemblyTypeName: uLipSync.uLipSyncBlendShape, uLipSync.Runtime
+        m_MethodName: OnLipSyncUpdate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  outputSoundGain: 1
+  audioSourceProxy: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,11 +1413,20 @@ PrefabInstance:
       propertyPath: 'm_BlendShapeWeights.Array.data[60]'
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9092990856692700133, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+--- !u!137 &808611351 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5542432353620879880, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
+  m_PrefabInstance: {fileID: 808611350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &815116043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,17 +1666,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1128214049 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4218350488933366020, guid: fe2adb6c30d99a946a9400e3249571f8, type: 3}
-  m_PrefabInstance: {fileID: 808611350}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed2b8592634da0a49b9fc63df2f3a2a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1275188450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,9 +1832,9 @@ MonoBehaviour:
   TTS:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1128214049}
-        m_TargetAssemblyTypeName: FaceBlend, Assembly-CSharp
-        m_MethodName: SpeakingFaceString
+      - m_Target: {fileID: 378533063}
+        m_TargetAssemblyTypeName: ElevenLabsTTS, Assembly-CSharp
+        m_MethodName: SendElevenLabsMessage
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

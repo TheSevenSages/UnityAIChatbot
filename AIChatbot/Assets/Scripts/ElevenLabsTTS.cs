@@ -53,7 +53,7 @@ public class ElevenLabsTTS : MonoBehaviour
 
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("xi-api-key", API_Key);
-            request.SetRequestHeader("Accept", "audio/mpeg");
+            request.SetRequestHeader("Accept", "audio/wav");
 
             yield return request.SendWebRequest();
 
